@@ -48,18 +48,16 @@ export default function NewsDetail({ id }: { id: string }) {
 
   return (
     <div className="p-8 rounded-full">
-      <div className="flex text-sm gap-7 mb-4 text-gray-400">
+      <div className="flex text-sm gap-7 mb-4 text-gray-500">
         <p>{text.date}</p>
         <p>記者 Gemini</p>
       </div>
       <p className="text-2xl font-extrabold mb-8">{title}</p>
       <p className="text-base whitespace-pre-wrap leading-relaxed mb-8">{body}</p>
 
-      <p className="text-sm text-gray-400 flex flex-col sm:flex-row gap-7 mb-32">
-        <span>出典 {text.source}</span>
-        <a href={text.url} className="text-sky-500 hover:underline">
-          {text.url}
-        </a>
+      <p className="text-sm flex flex-col sm:flex-row gap-7 mb-32">
+        <span className="text-gray-500">出典 {text.source}</span>
+        <a href={text.url} className="text-sky-500 hover:underline">{text.url}</a>
       </p>
 
       <VoteButtons />

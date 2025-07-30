@@ -9,6 +9,7 @@ type Article = {
   date: string;
   title: string;
   url: string;
+  source: string;
 };
 
 export default function NewsList() {
@@ -18,7 +19,7 @@ export default function NewsList() {
     const fetchArticles = async () => {
       const { data, error } = await supabase
         .from('articles')
-        .select('id, date, title, url')
+        .select('id, date, title, url, source')
         .order('date', { ascending: false }) // 日付の新しい順
         .limit(10); // 10件だけ取得
 
