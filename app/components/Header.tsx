@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <div>
       <div className=" ml-7 text-4xl font-bold text-orange-300 p-4 ">
-        Ani.com
+        Ani news by AI
       </div>
 
       <div className="flex justify-around p-2">
