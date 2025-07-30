@@ -1,8 +1,9 @@
 // app/page.tsx
 import Header from "./components/Header";
 import NewsList from "./components/NewsList";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ani news by AI",
   description: "Aniニュースは、世界のニュースをAIにより中立・公平にまとめて配信しています。",
   openGraph: {
@@ -12,7 +13,7 @@ export const metadata = {
     siteName: "Ani news by AI",
     images: [
       {
-        url: "/ogp.jpg",
+        url: "/image/ogp.png",
         width: 1200,
         height: 630,
       },
