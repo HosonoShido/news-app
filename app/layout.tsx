@@ -13,9 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ai-and-peace.com"), 
   title: "Ani news by AI",
   description: "Aniニュースは、世界のニュースをAIにより中立・公平にまとめて配信しています。",
-    openGraph: {
+  openGraph: {
     title: "Ani news by AI",
     description: "Aniニュースは、世界のニュースをAIにより中立・公平にまとめて配信しています。",
     url: "https://ai-and-peace.com", 
