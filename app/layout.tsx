@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-and-peace.com"), 
   title: "Ani news by AI",
+  icons: {
+    icon: '/favicon.ico',
+  },
   description: "Aniニュースは、世界のニュースをAIにより中立・公平にまとめて配信しています。",
   openGraph: {
     title: "Ani news by AI",
@@ -44,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body
         className={`
