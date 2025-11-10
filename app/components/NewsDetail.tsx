@@ -6,7 +6,7 @@ import { supabase } from "../api/supabaseClient";
 
 type Article = {
   id: number;
-  article: string; // 例: ai生成内容が入っているカラム名
+  article: string;
   date: string;
   url: string;
   source: string; 
@@ -20,7 +20,7 @@ export default function NewsDetail({ id }: { id: string }) {
     const fetchArticle = async () => {
       const { data, error } = await supabase
         .from("articles")
-        .select("id, article, date, url, source") // content カラム名を適宜変更
+        .select("id, article, date, url, source")
         .eq("id", Number(id))
         .single();
 
@@ -39,7 +39,6 @@ export default function NewsDetail({ id }: { id: string }) {
   if (loading) return <div className="p-6">読み込み中...</div>;
   if (!text) return <div className="p-6">記事が見つかりませんでした。</div>;
 
-  // text を行単位で分割し、1行目をタイトル、2行目以降を本文とする
   const lines = text.article.split(/\r?\n/);
 
   const title = lines[0]?.trim() || "（タイトルなし）";
