@@ -1,14 +1,19 @@
+// app/page.tsx
 import Header from "./components/Header";
 import NewsList from "./components/NewsList";
-import { Suspense } from "react"; // 1. Suspenseをインポート
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ country?: string }>;
+}) {
+  const params = await searchParams;
+  const country = params.country ?? "世界";
+
   return (
     <main>
       <Header />
-      <Suspense fallback={<div className="p-8 text-center">ニュースを読み込み中...</div>}>
-        <NewsList />
-      </Suspense>
+      <NewsList country={country} />
     </main>
   );
 }
