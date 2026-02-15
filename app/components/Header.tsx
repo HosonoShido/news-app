@@ -7,7 +7,8 @@ export default function Header() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const currentCountry = searchParams.get("country") ?? "世界";
+  const currentCountry = searchParams.get("country") ?? "world";
+
 
   const countries = [
   { label: '世界', value: 'world', image: '/images/earth.jpg' },
