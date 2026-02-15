@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-and-peace.com"), 
   title: "Ani news by AI",
-  description: "AIニュースは、世界のニュースをAIにより中立にまとめて配信しています。",
+  description: "Aniニュースは、世界のニュースをAIにより中立にまとめて配信しています。",
   openGraph: {
     title: "Ani news by AI",
-    description: "AIニュースは、世界のニュースをAIにより中立にまとめて配信しています。",
+    description: "Aniニュースは、世界のニュースをAIにより中立にまとめて配信しています。",
     url: "https://ai-and-peace.com", 
     siteName: "Ani news by AI",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@YourTwitterHandle", // あればTwitterアカウント名
+    site: "@YourTwitterHandle", // Twitterアカウントがあれば書く
   },
 };
 

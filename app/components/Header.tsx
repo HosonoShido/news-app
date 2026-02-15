@@ -29,8 +29,8 @@ export default function Header() {
   return (
     <div>
       <div className="ml-7 p-4 flex flex-col sm:flex-row items-center gap-8">
-        <span className="text-4xl font-bold text-orange-300">AI news</span>
-        <span>AIが公平・中立な視点で世界のニュースをお届けします</span>
+        <span className="text-4xl font-bold text-orange-300">Ani news</span>
+        <span>AIが中立的視点で世界のニュースをお届けします</span>
       </div>
 
       <div className="flex justify-around p-2">
