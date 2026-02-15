@@ -11,6 +11,7 @@ type Article = {
   generated_title: string | null;
   url: string;
   source: string;
+  article: string | null;
 };
 
 export default function NewsList({ country }: { country?: string }) {
@@ -20,7 +21,8 @@ export default function NewsList({ country }: { country?: string }) {
     const fetchArticles = async () => {
       let query = supabase
         .from('articles')
-        .select('id, date, title, generated_title, url, source');
+        .select('id, date, title, generated_title, url, source, article')
+        .not('article', "is", null);
 
       // 国が選択されている場合のみフィルタ
       if (country && country !== '世界') {
