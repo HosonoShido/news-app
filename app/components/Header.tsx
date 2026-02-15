@@ -11,7 +11,7 @@ export default function Header() {
 
 
   const countries = [
-  { label: '世界', value: 'world', image: '/images/earth.jpg' },
+  { label: 'すべて', value: 'world', image: '/images/earth.jpg' },
   { label: '日本', value: 'Japan', image: '/images/japan.png' },
   { label: 'アメリカ', value: 'USA', image: '/images/usa.png' },
   { label: '中国', value: 'China', image: '/images/china.png' }
