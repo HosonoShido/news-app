@@ -5,11 +5,16 @@ type Props = {
   id: number;
   date: string;
   title: string;
+  generated_title: string | null;
   url: string;
   source: string;
 };
 
-export default function NewsCard({ id, date, title, source }: Props) {
+export default function NewsCard({ id, date, title, generated_title, source }: Props) {
+    const displayTitle = generated_title
+    ? generated_title
+    : title;
+
   return (
     <Link href={`/news/${id}`}>
       <div className="p-8 hover:bg-sky-200">
@@ -17,7 +22,7 @@ export default function NewsCard({ id, date, title, source }: Props) {
           <span>{date}</span>
           <span>{source}</span>
         </p>
-        <p className="text-lg">{title}</p>
+        <p className="text-lg">{displayTitle}</p>
       </div>
     </Link>
   );
