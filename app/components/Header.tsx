@@ -10,17 +10,18 @@ export default function Header() {
   const currentCountry = searchParams.get("country") ?? "世界";
 
   const countries = [
-    { label: '世界', image: '/images/earth.jpg' },
-    { label: '日本', image: '/images/japan.png' },
-    { label: 'アメリカ', image: '/images/usa.png' },
-    { label: '中国', image: '/images/china.png' }
-  ];
+  { label: '世界', value: 'world', image: '/images/earth.jpg' },
+  { label: '日本', value: 'Japan', image: '/images/japan.png' },
+  { label: 'アメリカ', value: 'USA', image: '/images/usa.png' },
+  { label: '中国', value: 'China', image: '/images/china.png' }
+];
 
-  const handleFilter = (label: string) => {
-    if (label === '世界') {
+
+  const handleFilter = (value: string) => {
+    if (value === 'world') {
       router.push('/');
     } else {
-      router.push(`/?country=${label}`);
+      router.push(`/?country=${value}`);
     }
   };
 
@@ -32,14 +33,14 @@ export default function Header() {
       </div>
 
       <div className="flex justify-around p-2">
-        {countries.map(({ label, image }) => {
+        {countries.map(({ label, value, image }) => {
 
-          const isActive = currentCountry === label;
+          const isActive = currentCountry === value;
 
           return (
             <button
               key={label}
-              onClick={() => handleFilter(label)}
+              onClick={() => handleFilter(value)}
               className={`
                 w-40 h-16 text-white rounded bg-transparent relative overflow-hidden 
                 transform hover:scale-110 transition-all duration-300
