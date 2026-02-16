@@ -22,7 +22,7 @@ export default function NewsList({ country }: { country?: string }) {
       let query = supabase
         .from('articles')
         .select('id, date, title, generated_title, url, source, article')
-        .not('article', "is", null);
+        .not('article', 'is', null);
 
       // 国が選択されている場合のみフィルタ
       if (country && country !== '世界') {
