@@ -49,7 +49,7 @@ export default function NewsDetail({ id }: { id: string }) {
     <div className="p-8 rounded-full">
       <div className="flex text-sm gap-7 mb-4 text-gray-500">
         <p>{text.date}</p>
-        <p>記者 Gemini</p>
+        <p>記者は生成AIです</p>
       </div>
       <p className="text-2xl font-extrabold mb-8">{title}</p>
       <p className="text-base whitespace-pre-wrap leading-relaxed mb-8">{body}</p>
