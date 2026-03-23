@@ -46,7 +46,7 @@ export default function NewsList({ country }: { country?: string }) {
   return (
     <div>
       {articles.length === 0 ? (
-        <div className="p-8 text-center text-gray-500">
+        <div className="p-8 text-center text-[var(--foreground)]">
           該当するニュースはありません。
         </div>
       ) : (

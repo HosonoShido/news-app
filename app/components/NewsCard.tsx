@@ -11,14 +11,14 @@ type Props = {
 };
 
 export default function NewsCard({ id, date, title, generated_title, source }: Props) {
-    const displayTitle = generated_title
+  const displayTitle = generated_title
     ? generated_title
     : title;
 
   return (
     <Link href={`/news/${id}`}>
-      <div className="p-8 hover:bg-sky-200">
-        <p className="text-sm text-gray-500 flex items-center gap-8">
+      <div className="p-8 hover:bg-[var(--hover-surface)]">
+        <p className="text-sm text-[var(--muted)] flex items-center gap-8">
           <span>{date}</span>
           <span>{source}</span>
         </p>

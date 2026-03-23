@@ -48,8 +48,8 @@ export default function RootLayout({
           ${geistSans.variable} 
           ${geistMono.variable} 
           antialiased
-          bg-gradient-to-b from-black via-blue-800 to-red-200 text-white min-h-screen
           `}
+          // bg-gradient-to-b from-black via-blue-800 to-red-200 text-white min-h-screen
       >
         {children}
       </body>
