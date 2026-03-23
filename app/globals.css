@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --muted: #171717;
-  --hover-surface: #e0f2fe;
+  --hover-surface: #bae6fd;
   --link: #0ea5e9;
 }
 
@@ -19,7 +19,7 @@
   --background: #000000;
   --foreground: #ffffff;
   --muted: #ffffff;
-  --hover-surface: rgba(255, 255, 255, 0.12);
+  --hover-surface: #bae6fd;
   --link: #7dd3fc;
 }
 
