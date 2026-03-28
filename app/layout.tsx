@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import ThemeToggle from "./components/ThemeToggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -51,6 +52,7 @@ export default function RootLayout({
           `}
           // bg-gradient-to-b from-black via-blue-800 to-red-200 text-white min-h-screen
       >
+        <ThemeToggle />
         {children}
       </body>
     </html>
