@@ -22,6 +22,7 @@ export default function Header() {
   { label: 'アメリカ', value: 'USA', image: '/images/usa.png' },
   { label: '中国', value: 'China', image: '/images/china.png' },
   { label: 'イラン', value: 'Iran', image: '/images/iran.png' },
+  { label: 'タイ', value: 'Thailand', image: '/images/thailand.png' },
 ];
 
 
