@@ -63,8 +63,7 @@ export default function Header() {
                   backgroundPosition: "center",
                 }}
               />
-              <span className="absolute inset-0 rounded-md bg-black/15" />
-              <span className="relative z-10 text-xl font-extrabold text-white drop-shadow-[0_4px_10px_rgba(0,0,0,1)]">
+              <span className="relative z-10 text-[1.35rem] font-extrabold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
                 {label}
               </span>
             </button>
