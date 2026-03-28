@@ -70,19 +70,21 @@ export default function Header() {
         {countries.map(({ label, value, image }) => {
 
           const isActive = currentCountry === value;
+          const backgroundSize = value === "world" ? "cover" : "contain";
 
           return (
             <button
               key={label}
               onClick={() => handleFilter(value)}
               className={`
-                w-40 h-16 text-white rounded bg-transparent relative overflow-hidden 
+                h-[4.5rem] w-[7rem] text-white rounded bg-transparent relative overflow-hidden bg-slate-900/30
                 transform hover:scale-110 transition-all duration-300
                 ${isActive ? "ring-4 ring-orange-400 scale-105" : ""}
               `}
               style={{
                 backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
+                backgroundSize,
+                backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center'
               }}
             >
