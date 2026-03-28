@@ -66,28 +66,35 @@ export default function Header() {
         <span>AIが中立的視点で世界のニュースをお届けします</span>
       </div>
 
-      <div className="flex justify-around p-2">
+      <div className="flex flex-wrap justify-around gap-3 p-2">
         {countries.map(({ label, value, image }) => {
-
           const isActive = currentCountry === value;
-          const backgroundSize = value === "world" ? "cover" : "contain";
+          const backgroundSize = value === "world" ? "cover" : "100% 100%";
 
           return (
             <button
               key={label}
               onClick={() => handleFilter(value)}
               className={`
-                h-[4.5rem] w-[7rem] text-white rounded bg-transparent relative overflow-hidden bg-slate-900/30
+                rounded-md bg-transparent relative shrink-0
                 transform hover:scale-110 transition-all duration-300
                 ${isActive ? "ring-4 ring-orange-400 scale-105" : ""}
               `}
               style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center'
+                width: "6rem",
+                height: "3.5rem",
               }}
             >
+              <span
+                className="absolute inset-0 rounded-md"
+                style={{
+                  backgroundImage: `url(${image})`,
+                  backgroundSize,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              />
+              <span className="absolute inset-0 rounded-md bg-black/15" />
               <span className="relative z-10 text-xl font-extrabold drop-shadow-[0_4px_10px_rgba(0,0,0,1)]">
                 {label}
               </span>
